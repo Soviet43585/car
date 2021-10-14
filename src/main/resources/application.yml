@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/cars?serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  flyway:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/cars?serverTimezone=UTC}
+    user: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    enabled: true
+    schemas: cars
+    locations: classpath:db/migration
